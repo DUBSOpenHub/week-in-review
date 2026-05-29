@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] — 2026-05-29
+
+Docs-only patch release. No agent or behavior changes — just two README
+tidies that landed shortly after v1.2.0.
+
+### Changed
+
+- **README "See it in action" section trimmed.** Removed the redundant
+  "🐙 The hero shot — pulling from GitHub (no typing required)" block
+  (invocation walkthrough + collapsible notes-mode example). The same
+  invocation patterns are already covered in "30-second start" and
+  "Use it"; the remaining sample-output block carries the demo on its
+  own. Adjusted the next subhead from "Either way, you get this back"
+  to "What you get back" since "either" no longer made sense.
+
+- **Output example refreshed to match agent reality.** Audited the
+  example against the live agent prompt and fixed four drift issues:
+  (1) date refreshed from a months-old "Mar 17–21, 2026" to a current
+  "May 25–29, 2026"; (2) Title + Labels now shown in a fenced code
+  block exactly as the agent emits them (`Title: ...` /
+  `Labels: weekly-update, status`) instead of dressed-up markdown bold
+  and space-separated backtick code spans the agent never produces;
+  (3) removed the `**Body:**` prefix label the agent doesn't emit;
+  (4) closing line now mentions the Step 4 📬 "yes, file it for me"
+  option so the example matches the agent's actual close.
+
 ## [1.2.0] — 2026-05-29
 
 A flow-and-docs release. Same agent, same install, but the user-facing
@@ -146,6 +172,7 @@ original "paste notes, get status" flow still works exactly the same.
 Initial public release. Single Copilot agent that turns messy weekly
 notes into a polished, GitHub-issue-ready status update.
 
+[1.2.1]: https://github.com/DUBSOpenHub/copilot-week-in-review/releases/tag/v1.2.1
 [1.2.0]: https://github.com/DUBSOpenHub/copilot-week-in-review/releases/tag/v1.2.0
 [1.1.0]: https://github.com/DUBSOpenHub/copilot-week-in-review/releases/tag/v1.1.0
 [1.0.0]: https://github.com/DUBSOpenHub/copilot-week-in-review/releases/tag/v1.0.0
