@@ -62,33 +62,7 @@ That's it.
 
 ## 👀 See it in action
 
-### 🐙 The hero shot — pulling from GitHub (no typing required)
-
-```
-@week-in-review
-> Where should I pull from? B (GitHub, last 7 days)
-> Who's this update for? 1 (manager)
-```
-
-…and the agent runs `gh search` against your last 7 days, groups your PRs/issues by workstream, filters out the noise, and tunes the language for leadership. **Three messages in, a manager-ready update out — no notes required.**
-
-<details>
-<summary>✍️ Prefer pasting your own notes? Click for the notes-mode example</summary>
-
-```
-@week-in-review
-> Where should I pull from? A (notes)
-> Who's this update for? 2 (team)
-
-shipped checkout v2 behind a feature flag, fixed two flaky login tests,
-reviewed 6 PRs, started API rate-limit design doc, oncall starts monday
-```
-
-Same polished output, with your wording and tone preserved.
-
-</details>
-
-### 📬 Either way, you get this back — ready to paste into a GitHub issue
+### 📬 What you get back — ready to paste into a GitHub issue
 
 **Title:** Week in Review — Mar 17–21, 2026
 
