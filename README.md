@@ -6,6 +6,24 @@
 
 ---
 
+## 🏃 30-second start
+
+**1. Install** — paste this in your terminal:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/week-in-review/main/quickstart.sh | bash
+```
+
+**2. Use it** — in any GitHub Copilot CLI session, type:
+
+```
+@week-in-review
+```
+
+Then paste your messy weekly notes. That's it.
+
+---
+
 ## ✨ Why you'll use it
 
 | 🧠 You write | 🤖 You get back |
