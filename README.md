@@ -62,7 +62,7 @@ Closed out SOSS Fund Session 4, shipped a new Copilot agent, and locked in logis
 
 ---
 
-## ⚡ How simple
+## ⚡ Install
 
 Three lines. No config. No keys.
 
@@ -72,23 +72,10 @@ cd week-in-review && ./install.sh
 # then in any Copilot CLI session: @week-in-review
 ```
 
----
+Or, from inside a Copilot CLI session: `/agents add DUBSOpenHub/week-in-review`
 
-## 🚀 Install options
-
-**One-line install** (already shown above):
-
-```bash
-git clone https://github.com/DUBSOpenHub/week-in-review.git && cd week-in-review && ./install.sh
-```
-
-**Or via the GitHub Copilot CLI:**
-
-```
-/agents add DUBSOpenHub/week-in-review
-```
-
-The installer drops a single file into `~/.copilot/agents/`. That's it.
+**Requirements:** GitHub Copilot CLI · active [Copilot subscription](https://github.com/features/copilot) · macOS, Linux, or WSL.
+**Privacy:** Your notes stay in your Copilot session. No telemetry, no analytics, nothing sent anywhere this agent doesn't already use.
 
 ---
 
@@ -108,19 +95,6 @@ You'll get a polished, issue-ready update back. Then:
 - **Paste it** into a GitHub issue, Slack, or email
 - **Ask for tweaks** — "make it more casual", "more formal", "punchier"
 - **Have it filed** — "open this as an issue in `myorg/team-updates`"
-
----
-
-## ✨ Why GitHub-issue-ready by default?
-
-Because that's where weekly updates actually live for engineering teams:
-
-- `##` headings render as real section headers
-- `- [ ]` task items become **clickable checkboxes** — teammates tick things off as they ship
-- Built-in progress tracking (`2 of 6 done`) on the issue list
-- Linkable, searchable, archivable — Slack messages aren't
-
-The output also pastes cleanly into Slack, Notion, and email (markdown gracefully degrades).
 
 ---
 
