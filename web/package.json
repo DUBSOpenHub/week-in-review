@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && rm -rf ../docs && mkdir -p ../docs && cp -r out/. ../docs/ && touch ../docs/.nojekyll && echo '✓ site built and copied to /docs (commit + push to deploy)'"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
