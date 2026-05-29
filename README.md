@@ -1,6 +1,6 @@
 # 📅 Copilot Week in Review
 
-> **Copilot Week in Review is a GitHub Copilot agent that turns messy weekly notes or GitHub activity into a polished, GitHub-issue-ready status update in seconds.**
+> **Copilot Week in Review is a GitHub Copilot agent that turns your week — whether messy notes or raw GitHub activity — into a polished, audience-tuned, GitHub-issue-ready status update in seconds.**
 
 *Built using the [GitHub Copilot app](https://github.com/features/copilot) — chat, refine, ship.*
 
@@ -20,18 +20,27 @@ curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/copilot-week-in-review/
 @week-in-review
 ```
 
-Then paste your messy weekly notes. That's it.
+The agent then asks you two quick questions:
+
+1. **Source** — paste your own notes, pull from your GitHub activity, or both?
+2. **Audience** — your boss (formal, outcomes), your team (collaborative), or just yourself (raw log)?
+
+Answer those, and you get a polished update back. That's it.
 
 ---
 
 ## ✨ How it makes your week easier
 
-| 🧠 You write | 🤖 You get back |
+| 🧠 You bring | 🤖 You get back |
 |---|---|
 | Half-sentence brain dump | A polished status update |
+| Nothing — *"pull from my GitHub"* | A week summarized straight from your PRs & issues |
 | 30 seconds of typing | 0 seconds of writing |
 | Notes only you understand | Markdown your team can ship from |
 
+- 🎯 **Two-question intake** — *source* (notes / GitHub pull / both) and *audience* (boss / team / yourself), so the same agent fits every weekly ritual
+- 🐙 **Auto-pulls from GitHub** — uses `gh` to gather your last 7 days of PRs, reviews, issues, and comments across your repos. Skips the noise (typo fixes, bot bumps).
+- 🎚️ **Audience-aware tone** — *Boss* leads with outcomes & impact; *Team* highlights handoffs & "what's next"; *Yourself* keeps your voice and small wins
 - 📌 **GitHub-issue-ready by default** — `##` headings render, `- [x]` becomes clickable checkboxes your team can tick off as work ships
 - 🪶 **Tiny footprint** — one agent file, one installer, no servers, no config, no API keys
 - 🪄 **No repo required** — runs from any GitHub Copilot CLI session, anywhere
@@ -41,12 +50,24 @@ Then paste your messy weekly notes. That's it.
 
 ## 👀 See it in action
 
-### ✍️ You paste this
+### Path A — ✍️ You paste your own notes
 
 ```
 shipped checkout v2 behind a feature flag, fixed two flaky login tests,
 reviewed 6 PRs, started API rate-limit design doc, oncall starts monday
 ```
+
+*(Pair this with audience: **team** for the example below.)*
+
+### Path B — 🐙 You pull from GitHub instead
+
+```
+@week-in-review
+> Source? Pull from my GitHub activity
+> Audience? My boss
+```
+
+…and the agent runs `gh search` against your last 7 days, groups your PRs/issues by workstream, and tunes the language for leadership. No typing needed.
 
 ### 📬 You get this back — ready to paste into a GitHub issue
 
@@ -110,8 +131,8 @@ cd copilot-week-in-review && ./install.sh
 
 </details>
 
-**Requirements:** GitHub Copilot CLI · active [Copilot subscription](https://github.com/features/copilot) · macOS, Linux, or WSL.
-**Privacy:** Your notes stay in your Copilot session. No telemetry, no analytics, nothing sent anywhere this agent doesn't already use.
+**Requirements:** GitHub Copilot CLI · active [Copilot subscription](https://github.com/features/copilot) · macOS, Linux, or WSL. The optional *"pull from my GitHub"* mode needs the [`gh` CLI](https://cli.github.com/) authenticated as you (`gh auth login`).
+**Privacy:** Your notes stay in your Copilot session. When you pick the *"pull from my GitHub"* mode, the agent runs `gh` locally as you — nothing leaves your machine except the GitHub API calls `gh` already makes on your behalf. No telemetry, no analytics.
 
 ---
 
@@ -121,15 +142,29 @@ From any GitHub Copilot CLI session — **no repo required**:
 
 ```
 @week-in-review
+```
+
+The agent asks two quick questions, then either takes your notes or pulls from GitHub:
+
+**With your own notes:**
+```
+> Source? Paste my own notes
+> Audience? My team
 
 ran the design review, fixed two flaky tests, finished the Q3 plan draft,
 1:1s with three reports, prepping for the all-hands on Friday
 ```
 
+**Pulled from your GitHub activity:**
+```
+> Source? Pull from my GitHub activity
+> Audience? My boss
+```
+
 You'll get a polished, issue-ready update back. Then:
 
 - **Paste it** into a GitHub issue, Slack, or email
-- **Ask for tweaks** — "make it more casual", "more formal", "punchier"
+- **Ask for tweaks** — "make it more casual", "more formal", "punchier", "switch the audience to my team"
 - **Have it filed** — "open this as an issue in `myorg/team-updates`"
 
 ---

@@ -50,6 +50,11 @@ Out of scope (please report to GitHub directly):
 
 ## Privacy Notes
 
-This agent is intentionally tool-free. It does not read files, execute shell commands, or make network calls of its own. Any data the user pastes into a Copilot CLI session is subject to the [GitHub Copilot privacy terms](https://github.com/features/copilot) — nothing additional is sent anywhere by this agent.
+This agent is intentionally **tool-light**. It uses exactly two host capabilities, and only when the user opts in:
+
+- **`ask_user`** — for the 2-question intake (source + audience). Local to the Copilot session.
+- **`gh` (shell)** — only when the user selects the *"pull from my GitHub"* source. The agent runs read-only `gh search prs` and `gh search issues` against the GitHub API using the user's existing local `gh` authentication. No writes are performed. No other shell commands are executed. No third-party endpoints are contacted by this agent.
+
+Any data the user pastes into a Copilot CLI session is subject to the [GitHub Copilot privacy terms](https://github.com/features/copilot). When GitHub-pull mode is used, the GitHub API calls flow under the user's own `gh` auth and are subject to standard [GitHub API terms](https://docs.github.com/en/rest). Nothing additional is sent anywhere by this agent.
 
 Thank you for helping keep Copilot Week in Review and its users safe.
