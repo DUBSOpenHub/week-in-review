@@ -64,15 +64,18 @@ That's it.
 
 ### 📬 What you get back — ready to paste into a GitHub issue
 
-**Title:** Week in Review — Mar 17–21, 2026
+The agent emits a suggested **Title** and **Labels** above the body, so the whole thing is one paste away from being an issue:
 
-**Labels:** `weekly-update` `status`
+```
+Title: Week in Review — May 25–29, 2026
+Labels: weekly-update, status
+```
 
-**Body:**
+Then the body itself, which renders inside a GitHub issue like this:
 
 ## TL;DR
 
-Shipped Checkout v2 behind a feature flag, cleared the flaky login tests, and kicked off the API rate-limit design doc. Oncall starts Monday.
+Shipped Checkout v2 behind a feature flag, cleared the flaky login tests, and kicked off the API rate-limit design doc. Oncall starts Monday. 🎯
 
 ## ✅ Shipped this week
 
@@ -90,7 +93,7 @@ Shipped Checkout v2 behind a feature flag, cleared the flaky login tests, and ki
 - [ ] Begin staged rollout of Checkout v2.
 - [ ] Circulate the rate-limit design doc for team review.
 
-**That's it.** Paste it into an issue. Click the boxes as work ships. Done.
+**That's it.** Paste it into an issue yourself, or just say *"yes, file it in `myorg/team-updates`"* at the Step 4 📬 prompt and the agent will run `gh issue create` for you. Click the boxes as work ships. Done.
 
 ---
 
